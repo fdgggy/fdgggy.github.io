@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on fdgggy blog</title>
+    <link>https://fdgggy.github.io/post/</link>
+    <description>Recent content in Posts on fdgggy blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <copyright>Copyright (c) 2017. All rights reserved.  &lt;a href=&#39;http://www.miitbeian.gov.cn/&#39;&gt;粤ICP备17074587号-1&lt;/a&gt;</copyright>
+    <lastBuildDate>Sun, 14 Jul 2019 08:31:18 +0800</lastBuildDate>
+    
+	<atom:link href="https://fdgggy.github.io/post/feed.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>由 QuickJS 想到的</title>
+      <link>https://fdgggy.github.io/2019/07/14/quickjs/</link>
+      <pubDate>Sun, 14 Jul 2019 08:31:18 +0800</pubDate>
+      
+      <guid>https://fdgggy.github.io/2019/07/14/quickjs/</guid>
+      <description>前几天，一个叫 Fabrice Bellard 的大牛程序员发布了一个新的 JS 引擎：QuickJS，引起了业界轰动。QuickJS 的主要特点是小，嵌入式，完整支持 ES2019 语法，和</description>
+    </item>
+    
+  </channel>
+</rss>
