@@ -7,11 +7,6 @@
     </url>
     
     <url>
-        <loc>https://fdgggy.github.io/post/2019/first/</loc>
-        <lastmod>2019-07-15T12:05:08+08:00</lastmod>
-    </url>
-    
-    <url>
         <loc>https://fdgggy.github.io/post/</loc>
         <lastmod>2019-07-15T12:05:08+08:00</lastmod>
         <priority>0</priority>
@@ -33,6 +28,11 @@
         <loc>https://fdgggy.github.io/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/</loc>
         <lastmod>2019-07-15T12:05:08+08:00</lastmod>
         <priority>0</priority>
+    </url>
+    
+    <url>
+        <loc>https://fdgggy.github.io/2019/07/15/reconnect/</loc>
+        <lastmod>2019-07-15T12:05:08+08:00</lastmod>
     </url>
     
     <url>
