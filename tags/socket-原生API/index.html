@@ -7,22 +7,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>异步 | niep的博客</title>
-    <meta property="og:title" content="异步 - niep的博客">
+    <title>socket 原生API | niep的博客</title>
+    <meta property="og:title" content="socket 原生API - niep的博客">
     <meta property="og:type" content="article">
         
         
     <meta name="Keywords" content="golang,go语言笔记,niep,博客,软件架构,skynet,unity3d,linux">
-    <meta name="description" content="异步">
+    <meta name="description" content="socket 原生API">
         
     <meta name="author" content="niep">
-    <meta property="og:url" content="http://www.fdgggy.com/tags/%E5%BC%82%E6%AD%A5/">
+    <meta property="og:url" content="http://www.fdgggy.com/tags/socket-%E5%8E%9F%E7%94%9FAPI/">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="/css/normalize.css">
     
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="alternate" type="application/rss+xml+xml" href="http://www.fdgggy.com/tags/%E5%BC%82%E6%AD%A5/index.xml" title="niep的博客" />
+    <link rel="alternate" type="application/rss+xml+xml" href="http://www.fdgggy.com/tags/socket-%E5%8E%9F%E7%94%9FAPI/index.xml" title="niep的博客" />
     <script type="text/javascript" src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 
     
@@ -69,7 +69,7 @@
                     
                     <h3 class="archive-title">
                         包含标签
-                        <span class="keyword">异步</span>
+                        <span class="keyword">socket 原生API</span>
                         的文章
                     </h3>
                     
@@ -78,11 +78,11 @@
                         <article class="post">
                             <header>
                                 <h1 class="post-title">
-                                    <a href="http://www.fdgggy.com/2019/07/15/io_model/">Linux 源码解析网络编程-I/O模型详解</a>
+                                    <a href="http://www.fdgggy.com/2019/07/16/socket/">Linux 源码解析网络编程--socket,bind</a>
                                 </h1>
                             </header>
                             <date class="post-meta meta-date">
-                                2019年7月15日
+                                2019年7月16日
                             </date>
                             
                             <div class="post-meta meta-category">
@@ -93,8 +93,8 @@
                             </div>
                             
                             <div class="post-content">
-                                I/O模型 阻塞式I/O模型 socket套接字默认是阻塞的，如果I/O条件未满足，则进程或线程就会被挂起，直到I/O条件满足才返回。常用的IO操作都是阻塞I/O，如read一个已连接的套接字时，如果没有数据，那么就会挂起进程，阻塞等待，直到有数据可读时才返回。 如果采用阻塞式I/O做……
-                                <p class="readmore"><a href="http://www.fdgggy.com/2019/07/15/io_model/">阅读全文</a></p>
+                                scoket() 作用：创建一个通信端点并返回一个引用该端点的文件描述符 int socket(int domain, int type, int protocol); 参数： @domain(协议域),用于通信的协议簇,如: @type 套接字类型，制定通信的语义,如: SOCK_STREAM 有序，可靠，双向，基于连接的字节流 TCP SOCK_DGRAM 数据报,无连接，不可靠，具有固定最大长度 UDP @protocol 协议类型常值,一般设为0，系统设定do……
+                                <p class="readmore"><a href="http://www.fdgggy.com/2019/07/16/socket/">阅读全文</a></p>
                             </div>
                         </article>
                     
