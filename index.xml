@@ -21,6 +21,15 @@
     </item>
     
     <item>
+      <title>Linux 源码解析网络编程-listen</title>
+      <link>http://www.fdgggy.com/2019/07/16/listen/</link>
+      <pubDate>Tue, 16 Jul 2019 12:05:08 +0800</pubDate>
+      
+      <guid>http://www.fdgggy.com/2019/07/16/listen/</guid>
+      <description>listen() int listen(int sockfd, int backlog); 作用：监听套接字上的链接 @sockfd 引用SOCK_STREAM/SOCK_SEQPACKET类型套接字的文件描述符 @backlog 挂起连接的队列的最大长度, ***ddos攻击有关 linux 内核源码 /* * Perform a listen. Basically, we allow the protocol to do anything * necessary for a listen, and if that works, we mark the socket as * ready for listening. */ SYSCALL_DEFINE2(listen, int, fd, int, backlog) { struct socket *sock; int err, fput_needed; int somaxconn; //通过文件</description>
+    </item>
+    
+    <item>
       <title>Linux 源码解析网络编程-I/O模型详解</title>
       <link>http://www.fdgggy.com/2019/07/15/io_model/</link>
       <pubDate>Mon, 15 Jul 2019 12:05:08 +0800</pubDate>
