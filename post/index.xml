@@ -48,6 +48,15 @@
     </item>
     
     <item>
+      <title>unity3d的ui适配方案</title>
+      <link>http://www.fdgggy.com/2019/09/16/uiscaler/</link>
+      <pubDate>Mon, 16 Sep 2019 12:05:08 +0800</pubDate>
+      
+      <guid>http://www.fdgggy.com/2019/09/16/uiscaler/</guid>
+      <description>分辨率 显示分辨率 概念 屏幕图像的精密度，显示器所能显示的像素数量。 - 显示分辨率一定的情况下，显示屏越小(ppi越高)图像越清晰。 - 显示屏大小固定，显示分辨率越高(ppi越高)图像越清晰。 单位 dpi 点每英寸 lpi 线每英寸 ppi 像素每英寸 图像分辨率 单位英寸中所包含的像素点数，单位为ppi，像素每英</description>
+    </item>
+    
+    <item>
       <title>复杂度分析(上)</title>
       <link>http://www.fdgggy.com/2019/07/17/complexity/</link>
       <pubDate>Wed, 17 Jul 2019 12:05:08 +0800</pubDate>
