@@ -6,10 +6,28 @@
     <description>Recent content on niep的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 17 Oct 2019 12:05:08 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 17 Nov 2019 16:05:08 +0800</lastBuildDate>
     
 	<atom:link href="http://www.fdgggy.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>数据链路层</title>
+      <link>http://www.fdgggy.com/2019/11/17/lianluceng/</link>
+      <pubDate>Sun, 17 Nov 2019 16:05:08 +0800</pubDate>
+      
+      <guid>http://www.fdgggy.com/2019/11/17/lianluceng/</guid>
+      <description>概述 物理层上方的一种能正确且稳定的传输比特流的结构 ，能生成通往相邻设备的逻辑传输路径(数据链路)，并检查其中的传输错误并修复 数据链路层将来自网络层的数据包封装成帧后交给物理层 1、为网络层IP模块发送和接收IP数据报 2、为网络层ARP模块发送ARP请求和接收ARP应答 数据链路层接收</description>
+    </item>
+    
+    <item>
+      <title>物理层</title>
+      <link>http://www.fdgggy.com/2019/11/17/wuliceng/</link>
+      <pubDate>Sun, 17 Nov 2019 12:05:08 +0800</pubDate>
+      
+      <guid>http://www.fdgggy.com/2019/11/17/wuliceng/</guid>
+      <description>概述 物理层规定了数据在传输媒介(线缆)中的流动规则，并对物理性质做了规定，如线缆材质，连接器形状，pin的接法。 物理层接收由数据链路层发送的由0和1构成的数据帧，并将它们转换为电信号或光信号。 可以把LAN网线看成物理层，无线LAN就把信号理解成物理层。 标准规格 物理层的标准化是和数</description>
+    </item>
     
     <item>
       <title>内存管理</title>

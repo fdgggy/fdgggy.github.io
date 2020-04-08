@@ -68,6 +68,52 @@
                         <article class="post">
                             <header>
                                 <h1 class="post-title">
+                                    <a href="http://www.fdgggy.com/2019/11/17/lianluceng/" title="数据链路层" >数据链路层</a>
+                                </h1>
+                            </header>
+                            <date class="post-meta meta-date">
+                                2019年11月17日
+                            </date>
+                            
+                            <div class="post-meta">
+                                <span>|</span>
+                                
+                                <span class="meta-category"><a href="http://www.fdgggy.com/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C">计算机网络</a></span>
+                                
+                            </div>
+                            
+                            <div class="post-content">
+                                概述 物理层上方的一种能正确且稳定的传输比特流的结构 ，能生成通往相邻设备的逻辑传输路径(数据链路)，并检查其中的传输错误并修复 数据链路层将来自网络层的数据包封装成帧后交给物理层 1、为网络层IP模块发送和接收IP数据报 2、为网络层ARP模块发送ARP请求和接收ARP应答 数据链路层接收……
+                            </div>
+                            <p class="readmore"><a href="http://www.fdgggy.com/2019/11/17/lianluceng/">阅读全文</a></p>
+                        </article>
+                    
+                        <article class="post">
+                            <header>
+                                <h1 class="post-title">
+                                    <a href="http://www.fdgggy.com/2019/11/17/wuliceng/" title="物理层" >物理层</a>
+                                </h1>
+                            </header>
+                            <date class="post-meta meta-date">
+                                2019年11月17日
+                            </date>
+                            
+                            <div class="post-meta">
+                                <span>|</span>
+                                
+                                <span class="meta-category"><a href="http://www.fdgggy.com/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C">计算机网络</a></span>
+                                
+                            </div>
+                            
+                            <div class="post-content">
+                                概述 物理层规定了数据在传输媒介(线缆)中的流动规则，并对物理性质做了规定，如线缆材质，连接器形状，pin的接法。 物理层接收由数据链路层发送的由0和1构成的数据帧，并将它们转换为电信号或光信号。 可以把LAN网线看成物理层，无线LAN就把信号理解成物理层。 标准规格 物理层的标准化是和数……
+                            </div>
+                            <p class="readmore"><a href="http://www.fdgggy.com/2019/11/17/wuliceng/">阅读全文</a></p>
+                        </article>
+                    
+                        <article class="post">
+                            <header>
+                                <h1 class="post-title">
                                     <a href="http://www.fdgggy.com/2019/10/17/mem/" title="内存管理" >内存管理</a>
                                 </h1>
                             </header>
@@ -249,52 +295,6 @@
                             <p class="readmore"><a href="http://www.fdgggy.com/2019/07/17/complexity/">阅读全文</a></p>
                         </article>
                     
-                        <article class="post">
-                            <header>
-                                <h1 class="post-title">
-                                    <a href="http://www.fdgggy.com/2019/07/16/socket/" title="Linux 源码解析网络编程--socket,bind" >Linux 源码解析网络编程--socket,bind</a>
-                                </h1>
-                            </header>
-                            <date class="post-meta meta-date">
-                                2019年7月16日
-                            </date>
-                            
-                            <div class="post-meta">
-                                <span>|</span>
-                                
-                                <span class="meta-category"><a href="http://www.fdgggy.com/categories/%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90">源码分析</a></span>
-                                
-                            </div>
-                            
-                            <div class="post-content">
-                                scoket() 作用：创建一个通信端点并返回一个引用该端点的文件描述符 int socket(int domain, int type, int protocol); 参数： @domain(协议域),用于通信的协议簇,如: @type 套接字类型，制定通信的语义,如: SOCK_STREAM 有序，可靠，双向，基于连接的字节流 TCP SOCK_DGRAM 数据报,无连接，不可靠，具有固定最大长度 UDP @protocol 协议类型常值,一般设为0，系统设定do……
-                            </div>
-                            <p class="readmore"><a href="http://www.fdgggy.com/2019/07/16/socket/">阅读全文</a></p>
-                        </article>
-                    
-                        <article class="post">
-                            <header>
-                                <h1 class="post-title">
-                                    <a href="http://www.fdgggy.com/2019/07/16/listen/" title="Linux 源码解析网络编程-listen" >Linux 源码解析网络编程-listen</a>
-                                </h1>
-                            </header>
-                            <date class="post-meta meta-date">
-                                2019年7月16日
-                            </date>
-                            
-                            <div class="post-meta">
-                                <span>|</span>
-                                
-                                <span class="meta-category"><a href="http://www.fdgggy.com/categories/%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90">源码分析</a></span>
-                                
-                            </div>
-                            
-                            <div class="post-content">
-                                listen() int listen(int sockfd, int backlog); 作用：监听套接字上的链接 @sockfd 引用SOCK_STREAM/SOCK_SEQPACKET类型套接字的文件描述符 @backlog 挂起连接的队列的最大长度, ***ddos攻击有关 linux 内核源码 /* * Perform a listen. Basically, we allow the protocol to do anything * necessary for a listen, and if that works, we mark the socket as * ready for listening. */ SYSCALL_DEFINE2(listen, int, fd, int, backlog) { struct socket *sock; int err, fput_needed; int somaxconn; //通过文件……
-                            </div>
-                            <p class="readmore"><a href="http://www.fdgggy.com/2019/07/16/listen/">阅读全文</a></p>
-                        </article>
-                    
                     
 
 
@@ -339,6 +339,14 @@
 <ul class="widget-list">
     
     <li>
+        <a href="http://www.fdgggy.com/2019/11/17/lianluceng/" title="数据链路层">数据链路层</a>
+    </li>
+    
+    <li>
+        <a href="http://www.fdgggy.com/2019/11/17/wuliceng/" title="物理层">物理层</a>
+    </li>
+    
+    <li>
         <a href="http://www.fdgggy.com/2019/10/17/mem/" title="内存管理">内存管理</a>
     </li>
     
@@ -370,14 +378,6 @@
         <a href="http://www.fdgggy.com/2019/07/17/complexity/" title="复杂度分析(上)">复杂度分析(上)</a>
     </li>
     
-    <li>
-        <a href="http://www.fdgggy.com/2019/07/16/socket/" title="Linux 源码解析网络编程--socket,bind">Linux 源码解析网络编程--socket,bind</a>
-    </li>
-    
-    <li>
-        <a href="http://www.fdgggy.com/2019/07/16/listen/" title="Linux 源码解析网络编程-listen">Linux 源码解析网络编程-listen</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -401,6 +401,10 @@
     
     <li>
         <a href="http://www.fdgggy.com/categories/%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/">源码分析(3)</a>
+    </li>
+    
+    <li>
+        <a href="http://www.fdgggy.com/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络(2)</a>
     </li>
     
 </ul>
@@ -446,9 +450,13 @@
     
     <a href="http://www.fdgggy.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>
     
+    <a href="http://www.fdgggy.com/tags/%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82/">数据链路层</a>
+    
     <a href="http://www.fdgggy.com/tags/%E6%96%AD%E7%BA%BF%E9%87%8D%E8%BF%9E/">断线重连</a>
     
     <a href="http://www.fdgggy.com/tags/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/">时间复杂度</a>
+    
+    <a href="http://www.fdgggy.com/tags/%E7%89%A9%E7%90%86%E5%B1%82/">物理层</a>
     
     <a href="http://www.fdgggy.com/tags/%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/">空间复杂度</a>
     
