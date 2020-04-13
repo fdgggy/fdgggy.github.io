@@ -47,7 +47,7 @@
                         niep的博客
                     </a>
                 
-                <p class="description">专注于golang、skynet、unity3d、linux、移动互联网、项目管理、软件架构</p>
+                <p class="description">专注于手游，沉浸于unity3d、skynet、golang、linux、移动互联网、项目管理、软件架构</p>
             </div>
             <div>
                 <nav id="nav-menu" class="clearfix">
@@ -176,16 +176,22 @@ c#代码编译为IL中间语言，运行在MONO运行时，内存由MONO进行�
 
 <h4 id="内存泄露">内存泄露</h4>
 
-<h5 id="代码侧泄漏">代码侧泄漏</h5>
+<h5 id="代码侧泄漏及优化">代码侧泄漏及优化</h5>
 
-<p>对象不再使用，超出其作用域时，但没有被GC回收称为内存泄露，MONO内存泄露会使空闲内存减少，GC频繁，MONO堆不断扩充，最终导致游戏内存占用升高,导致应用崩溃。</p>
-
-<h6 id="解决办法">解决办法</h6></li>
+<p>对象不再使用，超出其作用域时，但没有被GC回收称为内存泄露，MONO内存泄露会使空闲内存减少，GC频繁，MONO堆不断扩充，最终导致游戏内存占用升高,导致应用崩溃。</p></li>
 
 <li><p>猜测+不断修改代码测试，对比内存分配情况，效率很低，可以用cube工具对mono内存快照对比，定位mono内存泄露。
 注意：<br />
 1.尽量少使用静态变量，静态变量是GC的根节点，不会被GC<br />
-2.对于不再使用的对象将其设置为Null，使其可以被GC</p>
+2.对于不再使用的对象将其设置为Null，使其可以被GC.<br />
+3.尽量复用对象，减少new的次数。<br />
+4.不同类型使用string +操作时使用StringBuilder代替String，减少不必要的字符串操作，使用for代替foreach。<br />
+5.局部变量或非常驻变量用struct代替class.<br />
+6.避免在update里面new对象(class,container,array)，会导致gc频繁.<br />
+7.检查游戏标签gameObject.CompareTag(&ldquo;Enemy&rdquo;)代替gameObject.tag==&ldquo;Enemy&rdquo;，会多余拷贝字符串，造成gc.<br />
+8.不要在update中调用getcomponent，在awake或start中缓存变量。<br />
+9.不要使用unity GUI,会造成大量gc alloc，禁用主摄像机的GUI Layer组件。<br />
+10.替换Debug.Log，unity所有log类型都会跟踪堆栈调用。</p>
 
 <h5 id="资源侧泄漏">资源侧泄漏</h5>
 
@@ -195,13 +201,36 @@ c#代码编译为IL中间语言，运行在MONO运行时，内存由MONO进行�
 
 <li><p>DontDestroyOnLoad的资源本身，及依赖的资源都不会卸载。</p></li>
 
-<li><p>Resource.Load的资源，不再使用后用Resource.UnloadAsset()或Resources.UnloadUnusedAssets()卸载。尽量不要使用，因为是一个遍历操作，造成卡顿，在合适的时机卸载。</p></li>
+<li><p>Resource.Load的资源，不再使用后用Resource.UnloadAsset()或Resources.UnloadUnusedAssets()卸载。尽量不要使用，因为是一个遍历操作，造成卡顿，在合适的时机卸载。会卸载AssetBundle加载后的资源和resource.load后的资源。</p></li>
 
 <li><p>Resources.UnloadUnusedAssets()内部会调用GC.Collect()，建议在加载环节调用。</p></li>
 
 <li><p>AssetBundle.load后，延迟卸载,unload(false);</p></li>
 
-<li><p>对资源或者代码，在生命期结束后就要释放。</p>
+<li><p>注意AssetBundle的资源冗余，可通过工具查看。</p></li>
+
+<li><p>对资源或者代码，在生命期结束后就要释放。</p></li>
+
+<li><p>对于在本地缓存资源，一定要在切换场景时remove或clear掉，否则Resources.UnloadUnusedAssets无法卸载，造成资源泄漏。</p></li>
+</ul>
+
+<h5 id="优化">优化</h5>
+
+<h6 id="纹理优化">纹理优化</h6>
+
+<p>1.纹理格式,根据硬件的种类选择硬件支持的文理根式。android平台用ETC1，IOS用PVRTC</p>
+
+<ul>
+<li>etc1不支持Alpha透明通道，opengl es2.0的设备只支持etc1。将透明贴图分拆为2张，一张RGB24位纹理记录原始颜色部分，一张Alpha8纹理记录透明通道部分，然后将2张贴图分别转化为etc1格式的文理，并通过shader渲染。<br /></li>
+
+<li><p>pvrtc的纹理尺寸需要正方形，否则显示不出来
+2.减少纹理尺寸，512*512的显示效果足够了，就没必要用1024*1024
+3.禁用Mipmap功能。mipmap会根据摄像机的远近选择不同精度的贴图，较远的显示的贴图像素低，优点是优化显存带宽减少渲染，缺点是占用内存。
+4.禁用Read&amp;Write，决定纹理是在内存上还是显存上，开启时会使纹理内存增大。
+####### AB加载
+1.尽量用CreateFromFile加载，因为www会产生webstream流，里面包含ab包本身和包含的资源
+2.对不用的ab包，unload(false)
+3.场景切换时，先跳转空场景，再跳到目标场景。避免两个场景叠加产生内存峰值。</p>
 
 <h3 id="库代码优化">库代码优化</h3>
 
@@ -209,7 +238,7 @@ c#代码编译为IL中间语言，运行在MONO运行时，内存由MONO进行�
 
 <li><p>unity库和第三方库，在player setting面板里的optimization中api level设置为.NET 2.0 Subset，不需要把.NET全部的api包含进去。</p></li>
 
-<li><p>库剥离去掉System.xml，如果要用，引入一个轻量级的xml库。</p></li>
+<li><p>库剥离去掉System.xml，如果要用，引入一个轻量级的xml库，如mono.xml。</p></li>
 
 <li><p>降低打包后程序的尺寸和代码的内存占用</p>
 
