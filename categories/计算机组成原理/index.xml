@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>计算机组成原理 on niep的博客</title>
+    <link>http://www.fdgggy.com/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/</link>
+    <description>Recent content in 计算机组成原理 on niep的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 18 Jan 2020 13:05:08 +0800</lastBuildDate>
+    
+	<atom:link href="http://www.fdgggy.com/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>系统总线</title>
+      <link>http://www.fdgggy.com/2020/01/18/systembus/</link>
+      <pubDate>Sat, 18 Jan 2020 13:05:08 +0800</pubDate>
+      
+      <guid>http://www.fdgggy.com/2020/01/18/systembus/</guid>
+      <description>总线 总线是连接多个部件的信息传输线，是各部件共享的传输介质。同一时刻只允许有一个部件向总线发送信息，而多个部件可以同时从总线上接收信息。 总线由许多导线直接印制在电路板上，延伸至各个部件。 总线设计方案分类 以CPU为中心的双总线结构 一组总线连接CPU和主存，称为存储总线(M总线)；另</description>
+    </item>
+    
+    <item>
+      <title>概论</title>
+      <link>http://www.fdgggy.com/2020/01/18/computerIntroduce/</link>
+      <pubDate>Sat, 18 Jan 2020 12:05:08 +0800</pubDate>
+      
+      <guid>http://www.fdgggy.com/2020/01/18/computerIntroduce/</guid>
+      <description>计算机体系结构 指计算机系统属性，包括指令集，数据类型，存储器寻址技术，I/O机理等抽象属性。不同架构的计算机系统属性不同，如高级语言编程的程序员把IBM PC与RS6000两种机器看成是同一属性的机器，但是对汇编语言编程的程序员来说，这两种机器是完全不同的机器，因为这两种机器的属性</description>
+    </item>
+    
+  </channel>
+</rss>
